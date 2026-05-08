@@ -1,3 +1,4 @@
+alias ls="ls --color=auto"
 alias ll="ls -la"
 alias lg="lazygit"
 alias n="nvim"
@@ -11,12 +12,6 @@ repeatTask() {
   for i in $(seq 1 $1); do
     eval $2
   done
-}
-
-phpChangeVer() {
-  brew unlink php
-  brew link --overwrite --force php@"$1"
-  php -v
 }
 
 php-change() {
